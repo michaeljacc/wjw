@@ -1,5 +1,3 @@
-# -*- coding: UTF-8 -*-
-
 from flask import Flask
 from flask import render_template
 
@@ -36,6 +34,5 @@ if __name__ == '__main__':
         debug=True,
         host='0.0.0.0',
         port=5000,
-        threaded=True,
     )
     app.run(**config)

@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 
 from flask import render_template
 from flask import request
@@ -48,10 +47,10 @@ def login():
     u = User(form)
     user = User.query.filter_by(username=u.username).first()
     if user is not None and user.validate_login(u):
-        print('登录成功')
+        print("success")
         session['user_id'] = user.id
     else:
-        print('登录失败')
+        print('FAILD')
     return redirect(url_for('.login_view'))
 
 
@@ -61,9 +60,9 @@ def update_password():
     password = request.form.get('password', '')
     print('password', password)
     if u.change_password(password):
-        print('修改成功')
+        print('CHANGESUCCESS')
     else:
-        print('用户密码修改失败')
+        print('FAILUE')
     return redirect('/profile')
 
 
