@@ -8,7 +8,7 @@ from api import main as api_routes
 
 
 app = Flask(__name__)
-app.secret_key = 'fsdfhloipljhklh'
+app.secret_key = 'secret key'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 
@@ -33,7 +33,7 @@ if __name__ == '__main__':
     config = dict(
         debug=True,
         host='0.0.0.0',
-        port=80,
+        port=5000,
         threaded=True,
     )
     app.run(**config)
