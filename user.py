@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 from flask import render_template
 from flask import request
 from flask import redirect
@@ -85,4 +87,3 @@ def profile():
         return render_template('profile.html', user=u)
     else:
         return redirect(url_for('.login_view'))
-
